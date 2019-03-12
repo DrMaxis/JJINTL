@@ -1,0 +1,23 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/css/animate.css": "/css/animate.css",
+    "/css/basestyle.css": "/css/basestyle.css",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
+    "/css/default.css": "/css/default.css",
+    "/css/fa.css": "/css/fa.css",
+    "/css/meanmenu.min.css": "/css/meanmenu.min.css",
+    "/css/nivoslider.css": "/css/nivoslider.css",
+    "/css/owl.carousel.min.css": "/css/owl.carousel.min.css",
+    "/css/pe7icon.css": "/css/pe7icon.css",
+    "/css/jqui.min.css": "/css/jqui.min.css",
+    "/css/responsivestyle.css": "/css/responsivestyle.css",
+    "/js/bootstrap.min.js": "/js/bootstrap.min.js",
+    "/js/dependantJs.js": "/js/dependantJs.js",
+    "/js/jquery.elevateZoom-3.0.8.min.js": "/js/jquery.elevateZoom-3.0.8.min.js",
+    "/js/jquery.meanmenu.min.js": "/js/jquery.meanmenu.min.js",
+    "/js/jquery.nivo.slider.js": "/js/jquery.nivo.slider.js",
+    "/js/jquery.scrollUp.js": "/js/jquery.scrollUp.js",
+    "/js/jqui.min.js": "/js/jqui.min.js",
+    "/js/owl.carousel.min.js": "/js/owl.carousel.min.js",
+    "/js/plugins.js": "/js/plugins.js"
+}
