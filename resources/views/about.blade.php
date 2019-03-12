@@ -9,7 +9,7 @@
 
 
 
-@section('content');
+@section('content')
 
 @include('partials.aboutUs.title')
 
