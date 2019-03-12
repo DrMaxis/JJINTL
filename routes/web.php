@@ -17,8 +17,7 @@ Route::get('/', 'PageController@index')->name('homepage');
 // About Us Page
 Route::get('/about', 'PageController@about')->name('about-us');
 
-// Contact Us Page
-Route::get('/contact', 'PageController@contact')->name('contact-us');
+
 
 // Product Information Page
 Route::get('/productinformation', 'PageController@productInfo')->name('product-info');

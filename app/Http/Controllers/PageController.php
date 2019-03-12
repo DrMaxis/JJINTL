@@ -31,7 +31,7 @@ class PageController extends Controller
         ]);
 
     }
-    public function contact() {
+    public function contactUs() {
 
         return view('contact');
 
