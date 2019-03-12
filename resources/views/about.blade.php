@@ -11,9 +11,9 @@
 
 @section('content')
 
-@include('partials.aboutUs.title')
+@include('partials.aboutus.title')
 
-@include('partials.aboutUs.content')
+@include('partials.aboutus.content')
 
 
 
