@@ -102,7 +102,7 @@ class CustomMenuItemsTableSeeder extends Seeder
             if (!$menuItem->exists) {
                 $menuItem->fill([
                     'target' => '_self',
-                    'icon_class' => 'voyager-lab',
+                    'icon_class' => 'voyager-news',
                     'color' => null,
                     'parent_id' => null,
                     'order' => 7,
@@ -117,7 +117,7 @@ class CustomMenuItemsTableSeeder extends Seeder
             if (!$menuItem->exists) {
                 $menuItem->fill([
                     'target' => '_self',
-                    'icon_class' => 'voyager-lab',
+                    'icon_class' => 'voyager-news',
                     'color' => null,
                     'parent_id' => null,
                     'order' => 8,
