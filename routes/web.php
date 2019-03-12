@@ -15,10 +15,10 @@
 Route::get('/', 'PageController@index')->name('homepage');
 
 // About Us Page
-Route::get('/about', 'PageController@aboutUs')->name('about-us');
+Route::get('/about', 'PageController@about')->name('about-us');
 
 // Contact Us Page
-Route::get('/contact', 'PageController@contactUs')->name('contact-us');
+Route::get('/contact', 'PageController@contact')->name('contact-us');
 
 // Product Information Page
 Route::get('/productinformation', 'PageController@productInfo')->name('product-info');

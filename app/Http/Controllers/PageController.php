@@ -23,17 +23,17 @@ class PageController extends Controller
 
     }
 
-    public function aboutUs() {
+    public function about() {
         $aboutUs = AboutUs::where('id', '=', 1)->first();
 
-        return view('aboutus')->with([
+        return view('about')->with([
             'aboutUs' => $aboutUs,
         ]);
 
     }
-    public function contactUs() {
+    public function contact() {
 
-        return view('contactUs');
+        return view('contact');
 
     }
 
