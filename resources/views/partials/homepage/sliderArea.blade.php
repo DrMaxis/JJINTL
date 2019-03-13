@@ -61,7 +61,7 @@
           
                               <div class="item active">
                                     <a href="{{route('single-product', $mainProduct->slug)}}"><img  style="max-height:600px;" class="h-100" src="{{productImage($mainProduct->image)}}" width="100%"></a>
-                                <div class="carousel-caption">
+                                <div style="position:initial;" class="carousel-caption">
                                   <h3>{{$mainProduct->name}}</h3>
                                   <p>{{$mainProduct->details}}<br></p>
                                 </div>
@@ -76,7 +76,7 @@
           
                             <div class="item">
                                     <a href="{{route('single-product', $product->slug)}}"> <img style="max-height:600px;" class="h-100" src="{{productImage($product->image)}}" width="100%"></a>
-                                    <div class="carousel-caption">
+                                    <div style="position:initial;" class="carousel-caption">
                                       <h3>{{$product->name}}</h3>
                                       <p>{{$product->details}}<br></p>
                                     </div>
