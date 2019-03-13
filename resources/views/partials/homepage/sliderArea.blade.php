@@ -60,7 +60,7 @@
           
           
                               <div class="item active">
-                                    <a href="{{route('single-product', $product->slug)}}"><img  style="max-height:600px;" class="h-100" src="{{productImage($mainProduct->image)}}" width="100%"></a>
+                                    <a href="{{route('single-product', $mainProduct->slug)}}"><img  style="max-height:600px;" class="h-100" src="{{productImage($mainProduct->image)}}" width="100%"></a>
                                 <div class="carousel-caption">
                                   <h3>{{$mainProduct->name}}</h3>
                                   <p>{{$mainProduct->details}}<br></p>
