@@ -19,5 +19,6 @@
     "/js/jquery.scrollUp.js": "/js/jquery.scrollUp.js",
     "/js/jqui.min.js": "/js/jqui.min.js",
     "/js/owl.carousel.min.js": "/js/owl.carousel.min.js",
-    "/js/plugins.js": "/js/plugins.js"
+    "/js/plugins.js": "/js/plugins.js",
+    "/js/wow.min.js": "/js/wow.min.js"
 }

@@ -583,18 +583,18 @@ NOTE: main.js, All custom script and plugin activation script in this file.
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\animate.scss */"./resources/sass/animate.scss");
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\basestyle.scss */"./resources/sass/basestyle.scss");
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\bootstrap.min.scss */"./resources/sass/bootstrap.min.scss");
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\default.scss */"./resources/sass/default.scss");
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\fa.scss */"./resources/sass/fa.scss");
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\meanmenu.min.scss */"./resources/sass/meanmenu.min.scss");
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\nivoslider.scss */"./resources/sass/nivoslider.scss");
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\owl.carousel.min.scss */"./resources/sass/owl.carousel.min.scss");
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\pe7icon.scss */"./resources/sass/pe7icon.scss");
-__webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\jqui.min.scss */"./resources/sass/jqui.min.scss");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\sass\responsivestyle.scss */"./resources/sass/responsivestyle.scss");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\animate.scss */"./resources/sass/animate.scss");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\basestyle.scss */"./resources/sass/basestyle.scss");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\bootstrap.min.scss */"./resources/sass/bootstrap.min.scss");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\default.scss */"./resources/sass/default.scss");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\fa.scss */"./resources/sass/fa.scss");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\meanmenu.min.scss */"./resources/sass/meanmenu.min.scss");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\nivoslider.scss */"./resources/sass/nivoslider.scss");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\owl.carousel.min.scss */"./resources/sass/owl.carousel.min.scss");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\pe7icon.scss */"./resources/sass/pe7icon.scss");
+__webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\jqui.min.scss */"./resources/sass/jqui.min.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\sass\responsivestyle.scss */"./resources/sass/responsivestyle.scss");
 
 
 /***/ })

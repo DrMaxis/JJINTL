@@ -20839,7 +20839,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\js\dependantJs.js */"./resources/js/dependantJs.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\js\dependantJs.js */"./resources/js/dependantJs.js");
 
 
 /***/ })

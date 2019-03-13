@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 9);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -114,14 +114,14 @@
 
 /***/ }),
 
-/***/ 9:
+/***/ 10:
 /*!***************************************!*\
   !*** multi ./resources/js/plugins.js ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\js\plugins.js */"./resources/js/plugins.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\js\plugins.js */"./resources/js/plugins.js");
 
 
 /***/ })

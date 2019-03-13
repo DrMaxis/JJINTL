@@ -273,7 +273,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\JJInternational\BellsFerry\BellsFerryDev\resources\js\jquery.scrollUp.js */"./resources/js/jquery.scrollUp.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\JJINTL\resources\js\jquery.scrollUp.js */"./resources/js/jquery.scrollUp.js");
 
 
 /***/ })

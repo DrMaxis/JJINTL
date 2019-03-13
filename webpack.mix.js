@@ -87,5 +87,6 @@ mix
     .js('resources/js/jquery.nivo.slider.js', 'public/js')
     .js('resources/js/jquery.scrollUp.js', 'public/js')
     .js('resources/js/owl.carousel.min.js', 'public/js')
+    .js('resources/js/wow.min.js', 'public/js')
     .js('resources/js/plugins.js', 'public/js')
    
