@@ -287,7 +287,7 @@ class ProductsController extends VoyagerBaseController
         }
 
         $allCategories = Category::all();
-        $variants = ProductVariant::all();
+        $variants = VariantProduct::all();
         $merchants = MerchantProduct::all();
         $variantsForProduct = collect([]);
         $merchantsForProduct = collect([]);
