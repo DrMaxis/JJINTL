@@ -141,7 +141,7 @@ class CustomDataRowsTableSeeder extends Seeder
         $dataRow = $this->dataRow($productDataType, 'new');
         if (!$dataRow->exists) {
             $dataRow->fill([
-                'type' => 'text',
+                'type' => 'checkbox',
                 'display_name' => 'New',
                 'required' => 0,
                 'browse' => 1,
@@ -157,7 +157,7 @@ class CustomDataRowsTableSeeder extends Seeder
         $dataRow = $this->dataRow($productDataType, 'featured');
         if (!$dataRow->exists) {
             $dataRow->fill([
-                'type' => 'text',
+                'type' => 'checkbox',
                 'display_name' => 'Featured',
                 'required' => 0,
                 'browse' => 1,
@@ -221,12 +221,12 @@ class CustomDataRowsTableSeeder extends Seeder
             $dataRow->fill([
                 'type' => 'timestamp',
                 'display_name' => 'Created At',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
+                'required' => 0,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
                 'details' => '',
                 'order' => 14,
             ])->save();
@@ -236,12 +236,12 @@ class CustomDataRowsTableSeeder extends Seeder
             $dataRow->fill([
                 'type' => 'timestamp',
                 'display_name' => 'Updated At',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
+                'required' => 0,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
                 'details' => '',
                 'order' => 15,
             ])->save();
@@ -443,7 +443,7 @@ class CustomDataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"on":"Yes","off":"No"}',
+                'details' => '',
                 'order' => 7,
             ])->save();
         }
@@ -451,7 +451,7 @@ class CustomDataRowsTableSeeder extends Seeder
         $dataRow = $this->dataRow($variantDataType, 'new');
         if (!$dataRow->exists) {
             $dataRow->fill([
-                'type' => 'text',
+                'type' => 'checkbox',
                 'display_name' => 'New',
                 'required' => 0,
                 'browse' => 1,
@@ -467,7 +467,7 @@ class CustomDataRowsTableSeeder extends Seeder
         $dataRow = $this->dataRow($variantDataType, 'featured');
         if (!$dataRow->exists) {
             $dataRow->fill([
-                'type' => 'text',
+                'type' => 'checkbox',
                 'display_name' => 'Featured',
                 'required' => 0,
                 'browse' => 1,
