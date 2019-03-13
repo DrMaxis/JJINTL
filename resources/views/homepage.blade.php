@@ -1,7 +1,7 @@
 @extends('layouts.ui')
 
 
-
+@section('xcss')
 
 <style>
 
