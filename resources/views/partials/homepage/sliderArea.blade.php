@@ -37,28 +37,9 @@
                 {{--Main Slider Area Start --}}
                 <div class="slider-wrapper theme-default">
                     {{--Slider Background  Image Start--}}
-                  {{--   <div id="slider" class="skdslider">
-                        <ul>
-                            <li>
-                                 @foreach($products as $product) 
+              
           
-          
-                        <img src="{{productImage($product->image)}}" data-thumb="{{productImage($product->image)}}" alt="" title="#htmlcaption{{$product->id}}" />
-                       
-                    <div  class="slide-desc">
-                        <h2>{{$product->name}}</h2>
-                            <p  >{{$product->details}}</p>
-                        
-                      
-                    </div>
-                    @endforeach
-                            </li>
-                        </ul>
-                      
-                    </div> --}}
-          
-          
-          
+
           
                      <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
                             <!-- Indicators -->
@@ -79,7 +60,7 @@
           
           
                               <div class="item active">
-                                <img  style="max-height:600px;" class="h-100" src="{{productImage($mainProduct->image)}}" width="100%">
+                                    <a href="{{route('single-product', $product->slug)}}"><img  style="max-height:600px;" class="h-100" src="{{productImage($mainProduct->image)}}" width="100%"></a>
                                 <div class="carousel-caption">
                                   <h3>{{$mainProduct->name}}</h3>
                                   <p>{{$mainProduct->details}}<br></p>
@@ -94,7 +75,7 @@
                             @else 
           
                             <div class="item">
-                                    <img style="max-height:600px;" class="h-100" src="{{productImage($product->image)}}" width="100%">
+                                    <a href="{{route('single-product', $product->slug)}}"> <img style="max-height:600px;" class="h-100" src="{{productImage($product->image)}}" width="100%"></a>
                                     <div class="carousel-caption">
                                       <h3>{{$product->name}}</h3>
                                       <p>{{$product->details}}<br></p>
@@ -117,65 +98,6 @@
                           </div>
                            
           
-          {{-- 
-                           <div id="container">
-                             @foreach($products -> take(1) as $mainProduct) 
-          
-          
-                            <div class="content active" data-slide="1" data-bg="{{productImage($mainProduct->image)}}">
-                              <div class="info-logo"><i class="material-icons">style</i></div>
-                              <div class="info-wrapper">
-                                <h3 class="slidetitle">{{$mainProduct->name}}</h3>
-                                <p>{{$mainProduct->details}}</p>
-                              </div>
-                              <div class="bottom-divider"></div>
-                            </div>
-                            @endforeach
-                            @foreach($products as $product)
-                            @if($product->slug ==
-                            $mainProduct->slug)
-          
-                            @else 
-                            <div class="content " data-slide="1" data-bg="{{productImage($product->image)}}">
-                                <div class="info-logo"><i class="material-icons">style</i></div>
-                                <div class="info-wrapper">
-                                  <h3 class="slidetitle">{{$product->name}}</h3>
-                                  <p>{{$product->details}}</p>
-                                </div>
-                                <div class="bottom-divider"></div>
-                              </div>
-                              @endif
-                              @endforeach
-                            <div class="playbutton">
-                              <!--i.fa.fa-play.fa-2x.fa-stack-2x-->
-                              <!--i.fa.fa-pause.fa-2x.fa-stack-x--><i class="material-icons play">play_arrow</i><i class="material-icons pause">pause</i>
-                            </div>
-                            <div class="slide-left"><i class="material-icons">chevron_left</i></div>
-                            <div class="slide-right"><i class="material-icons">chevron_right</i></div>
-                          </div> --}}
-          
-          
-          
-          
-          
-          
-          {{-- <div class="owl-carousel">
-            @foreach($products as $product)
-              <div class="item">
-                <a href="{{route('single-product', $product->slug)}}">
-                <img src="{{productImage($product->image)}}" alt="" />
-                <div class="inner">
-                  <a href="{{route('single-product', $product->slug)}}">{{$product->name}}</a>
-                </div>
-                </a>
-            </div>
-                @endforeach
-          </div> --}}
-                    {{--Slider Background  Image Start--}}
-                    {{--Slider htmlcaption Start--}}
-                   
-          
-                    {{--Slider htmlcaption End --}}
                 </div>
                 {{--Main Slider Area End --}}
             </div>
