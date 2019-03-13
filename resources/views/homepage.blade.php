@@ -2,8 +2,7 @@
 
 
 
-@section('xcss')
-<link href="{{asset('css/skdslider.css')}}" rel="stylesheet">
+
 <style>
 
 .h-100 {
@@ -111,7 +110,7 @@
 @endsection
 
 @section('xjs')
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="{{asset('js/skdslider.js')}}"></script>
+
+
 
 @endsection
