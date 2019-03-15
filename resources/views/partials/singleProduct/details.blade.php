@@ -11,7 +11,7 @@
                 <div class="tab-content thumb-content">
 
                     <div id="merchants" class="tab-pane fade in pb-40">
-                        <h3>Where To Get</h3>
+                    
                         <div class="table-responsive">
                             <table class="pmtable">
                                 <tbody>
