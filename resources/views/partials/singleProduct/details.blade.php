@@ -117,7 +117,7 @@
                             </span>  
                             @else  
                             <span>
-                                    {{dd(productInstructions($product->instructions))}}<a href="#">No instructions have been uploaded yet!</a>
+                                    {{-- {{dd(productInstructions($product->instructions))}} --}}<a href="#">No instructions have been uploaded yet!</a>
                                 </span>  
                             @endif                              
                         </p>
