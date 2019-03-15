@@ -18,7 +18,7 @@ function contentImage($path)
 function productInstructions($productDocument)
 {
     $path = json_decode($productDocument)[0]->download_link;
-    return  $path;
+    return  '/storage/'.$path;
 }
 
 
