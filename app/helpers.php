@@ -21,6 +21,7 @@ function productInstructions($productDocument)
         dd($productDocument);
         return true;
     } else {
+        dd($productDocument);
         $path = json_decode($productDocument)[0]->download_link;
         dd($path);
         return  '/storage/' . $path;
