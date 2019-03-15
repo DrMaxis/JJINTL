@@ -19,6 +19,7 @@ function productInstructions($productDocument)
 {
     $link = json_decode($productDocument);
     if ($link == []) {
+        dd($link);
         return true;
     } else {
         /* dd($productDocument); */
