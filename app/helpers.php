@@ -21,7 +21,7 @@ function productInstructions($productDocument)
     
     $link = json_decode($productDocument);
     if ($link == []) {
-        return true;
+        return false;
     } else {
         /* dd($productDocument); */
         $path = json_decode($productDocument)[0]->download_link;
