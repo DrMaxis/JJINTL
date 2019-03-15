@@ -18,11 +18,11 @@ function contentImage($path)
 function productInstructions($productDocument)
 {
     $link = json_decode($productDocument);
-    if ($link == '[]') {
+    if ($link == "[]") {
         return true;
     } else {
         /* dd($productDocument); */
-        $path = '/storage/' . $link;
+        $path = $link;
         dd($path);
         return  '/storage/' . $path;
     }
