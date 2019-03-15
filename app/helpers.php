@@ -17,15 +17,18 @@ function contentImage($path)
 
 function productInstructions($productDocument)
 {
+
+    
     $link = json_decode($productDocument);
     if ($link == []) {
         return true;
     } else {
         /* dd($productDocument); */
-        $path = json_decode($link)[0]->download_link;
+        $path = json_decode($productDocument)[0]->download_link;
         dd($path);
         return  '/storage/' . $path;
     }
+    
 }
 
 
