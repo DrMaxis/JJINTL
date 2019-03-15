@@ -3,6 +3,7 @@
 use App\Link;
 use App\Product;
 use App\Merchant;
+use function GuzzleHttp\json_decode;
 
 function productImage($path)
 {
@@ -14,10 +15,11 @@ function contentImage($path)
     return  $path != null && file_exists('storage/' . $path) ? asset('storage/' . $path) : asset('assets/imgs/about-us.png');
 }
 
-function productInstructions($path)
+function productInstructions($productDocument)
 {
-    return  $path != null && file_exists('storage/' . $path) ? asset('storage/' . $path) : asset('assets/docs/noinfo.docx');
+    return  json_decode($productDocument) ? asset('storage/' . $productDocument)  : asset('assets/imgs/about-us.png');
 }
+
 
 
  function getMerchantLink($merchant) {
