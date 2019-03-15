@@ -118,7 +118,7 @@
                             </span>  
                             @else  
                             <span>
-                                    {{--  --}}<a href="#">No instructions have been uploaded yet!</a>
+                                    {{--  --}}<a >Instuctions will be uploaded soon.</a>
                                 </span>  
                             @endif                              
                         </p>
