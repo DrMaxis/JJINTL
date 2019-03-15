@@ -109,6 +109,7 @@
                            {{--  {{dd(productInstructions($product->instructions)[0]->download_link)}} --}}
                             {{-- {{dd($product->instructions)}} --}}
                            {{--  {{dd("/storage/".json_decode($product->instructions)[0]->download_link)}} --}}
+                           {{dd(productInstructions($product->instructions))}}
                         <p> Looking for product installation instructions? 
                             @if(!empty($product->instructions) ) 
                             <span>
