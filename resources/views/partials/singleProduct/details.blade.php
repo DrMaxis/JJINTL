@@ -106,8 +106,8 @@
                             </table>
                         </div>
                         <div class="mb-10">
-                          {{--   {{dd(productInstructions($product->instructions))}} --}}
-                            <p> Looking for product installation instructions? <span><a href="{{$product->instructions}}"> Click here to download</a></span>                                </p>
+                            {{dd($product->instructions)}}
+                            <p> Looking for product installation instructions? <span><a href="{{productInstructions($product->instructions)}}"> Click here to download</a></span>                                </p>
                         </div>
                     </div>
                     
