@@ -16,7 +16,7 @@ function contentImage($path)
 
 function productInstructions($path)
 {
-    return  $path != null && file_exists('storage/products' . $path) ? asset('storage/products' . $path) : asset('assets/docs/noinfo.docx');
+    return  $path != null && file_exists('storage/' . $path) ? asset('storage/' . $path) : asset('assets/docs/noinfo.docx');
 }
 
 
