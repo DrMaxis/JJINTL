@@ -107,8 +107,8 @@
                         </div>
                         <div class="mb-10">
                             {{-- {{dd($product->instructions)}} --}}
-                            {{dd("/storage/".json_decode($product->instructions)[0]->download_link)}}
-                            <p> Looking for product installation instructions? <span><a href="{{productInstructions($product->instructions)}}"> Click here to download</a></span>                                </p>
+                           {{--  {{dd("/storage/".json_decode($product->instructions)[0]->download_link)}} --}}
+                            <p> Looking for product installation instructions? <span><a href="/storage/{{json_decode($product->instructions)[0]->download_link}}"> Click here to download</a></span>                                </p>
                         </div>
                     </div>
                     
