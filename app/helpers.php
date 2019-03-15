@@ -17,25 +17,31 @@ function contentImage($path)
 
 function productInstructions($productDocument)
 {
-    $path = json_decode($productDocument)[0]->download_link;
-    return  '/storage/'.$path;
+    if (empty($productDocument)) {
+        dd($productDocument);
+        return true;
+    } else {
+        $path = json_decode($productDocument)[0]->download_link;
+        dd($path);
+        return  '/storage/' . $path;
+    }
 }
 
 
 
- function getMerchantLink($merchant) {
+function getMerchantLink($merchant)
+{
     $merchant = $merchant;
 
-   foreach($merchant->links()->get() as $link) {
-        
-       if($link->pivot->product_id == $merchant->pivot->product_id) {
-           $link = Link::find($link->id);
-           $data = $link->link;
-       }
-       
-   }
-    
-return $data;
-    /* {{dd($merchant->pivot->merchant_id, $merchant->links()->get()->first()->pivot->merchant_id)}} */
+    foreach ($merchant->links()->get() as $link) {
 
+        if ($link->pivot->product_id == $merchant->pivot->product_id) {
+            $link = Link::find($link->id);
+            $data = $link->link;
+        }
+    }
+
+    return $data;
+    /* {{dd($merchant->pivot->merchant_id, $merchant->links()->get()->first()->pivot->merchant_id)}} */
 }
+
