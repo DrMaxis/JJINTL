@@ -112,7 +112,7 @@
                            
                         <p> Looking for product installation instructions? 
                             @if(!empty($product->instructions) ) 
-                            {{dd(productInstructions(json_decode($product->instructions)[0]))}}
+                            {{dd(productInstructions(json_decode($product->instructions)[0]->download_link))}}
                             <span>
                                 <a href="/storage/{{productInstructions($product->instructions)[0]->download_link}}"> Click here to download</a>
                             </span>  
