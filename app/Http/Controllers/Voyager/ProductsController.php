@@ -173,10 +173,10 @@ class ProductsController extends VoyagerBaseController
        
         $allCategories = Category::all();
         $variants = Variant::all();
-        $merchants = Merchant::all();
+        
         $product = Product::find($id);
         
-        $merchantsForProduct = $product->merchants()->get();
+        
         $categoriesForProduct = $product->categories()->get();
         $variantsForProduct = $product->variants()->get();
         // If a column has a relationship associated with it, we do not want to show that field
@@ -196,7 +196,7 @@ class ProductsController extends VoyagerBaseController
 
        
     
-        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable','allCategories', 'categoriesForProduct', 'variants', 'variantsForProduct', 'merchants', 'merchantsForProduct'));
+        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable','allCategories', 'categoriesForProduct', 'variants', 'variantsForProduct'));
     }
 
     // POST BR(E)AD
@@ -288,11 +288,11 @@ class ProductsController extends VoyagerBaseController
 
         $allCategories = Category::all();
         $variants = VariantProduct::all();
-        $merchants = MerchantProduct::all();
+       
         $variantsForProduct = collect([]);
-        $merchantsForProduct = collect([]);
+       
         $categoriesForProduct = collect([]);
-        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable', 'allCategories', 'categoriesForProduct', 'variants', 'variantsForProduct','merchants', 'merchantsForProduct'));
+        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable', 'allCategories', 'categoriesForProduct', 'variants', 'variantsForProduct'));
     }
 
     /**
@@ -328,7 +328,7 @@ class ProductsController extends VoyagerBaseController
 
             $this->updateProductVariants($request, $data->id);
 
-            $this->updateMerchantProducts($request, $data->id);
+            
 
             if ($request->ajax()) {
                 return response()->json(['success' => true, 'data' => $data]);
@@ -370,7 +370,7 @@ class ProductsController extends VoyagerBaseController
         }
     }
 
-    protected function updateMerchantProducts(Request $request, $id)
+ /*    protected function updateMerchantProducts(Request $request, $id)
     {
         
        
@@ -387,5 +387,5 @@ class ProductsController extends VoyagerBaseController
                 ]);
             }
         }
-    }
+    } */
 }
