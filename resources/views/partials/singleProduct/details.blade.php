@@ -108,7 +108,7 @@
                         <div class="mb-10">
                             {{-- {{dd($product->instructions)}} --}}
                            {{--  {{dd("/storage/".json_decode($product->instructions)[0]->download_link)}} --}}
-                            <p> Looking for product installation instructions? <span>@if($product->instructions) <a href="/storage/{{json_decode($product->instructions)[0]->download_link}}"> Click here to download</a>@endif</span>                                </p>
+                            <p> Looking for product installation instructions? @if($product->instructions) <span><a href="/storage/{{json_decode($product->instructions)[0]->download_link}}"> Click here to download</a></span>@endif                                </p>
                         </div>
                     </div>
                     
