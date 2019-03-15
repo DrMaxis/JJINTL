@@ -17,7 +17,7 @@ function contentImage($path)
 
 function productInstructions($productDocument)
 {
-    $path = $productDocument->download_link;
+    $path = $productDocument[0]->download_link;
     return  $path;
 }
 
