@@ -113,7 +113,7 @@
                         <p> Looking for product installation instructions? 
                             @if(!empty($product->instructions) ) 
                             <span>
-                                <a href="/storage/{{productInstructions($product->instructions)[0]['download_link']}}"> Click here to download</a>
+                                <a href="/storage/{{productInstructions($product->instructions)[0]->download_link}}"> Click here to download</a>
                             </span>  
                             @else  
                             <span>
