@@ -231,10 +231,10 @@ class ProductsController extends VoyagerBaseController
         
             CategoryProduct::where('product_id', $id)->delete();
             VariantProduct::where('product_id', $id)->delete();
-            MerchantProduct::where('product_id', $id)->delete();
+           
             //Update if there's at least one category checked
             $this->updateProductCategories($request, $id);
-            $this->updateMerchantProducts($request, $id);
+           
             $this->updateProductVariants($request, $id);
         return redirect()
         ->route("voyager.{$dataType->slug}.index")
