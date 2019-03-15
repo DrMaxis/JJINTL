@@ -125,7 +125,7 @@ class CustomDataRowsTableSeeder extends Seeder
         if (!$dataRow->exists) {
             $dataRow->fill([
                 'type' => 'number',
-                'display_name' => 'Shipping Weight',
+                'display_name' => 'Product Weight',
                 'required' => 0,
                 'browse' => 0,
                 'read' => 1,
@@ -234,7 +234,7 @@ class CustomDataRowsTableSeeder extends Seeder
             $dataRow->fill([
                 'type' => 'image',
                 'display_name' => 'Image',
-                'required' => 1,
+                'required' => 0,
                 'browse' => 1,
                 'read' => 1,
                 'edit' => 1,
