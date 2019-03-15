@@ -17,7 +17,7 @@ function contentImage($path)
 
 function productInstructions($productDocument)
 {
-    return  json_decode($productDocument)/* [0]['download_link'] */ ? asset('storage/' . $productDocument)  : asset('assets/imgs/about-us.png');
+    return  json_decode($productDocument)/* [0]['download_link'] */;
 }
 
 
