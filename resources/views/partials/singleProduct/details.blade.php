@@ -112,12 +112,13 @@
                            
                         <p> Looking for product installation instructions? 
                             @if(!empty($product->instructions) ) 
+                            {{dd(productInstructions($product->instructions))}}
                             <span>
                                 <a href="/storage/{{productInstructions($product->instructions)[0]->download_link}}"> Click here to download</a>
                             </span>  
                             @else  
                             <span>
-                                    {{-- {{dd(productInstructions($product->instructions))}} --}}<a href="#">No instructions have been uploaded yet!</a>
+                                    {{--  --}}<a href="#">No instructions have been uploaded yet!</a>
                                 </span>  
                             @endif                              
                         </p>
