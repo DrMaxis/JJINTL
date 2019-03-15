@@ -110,7 +110,7 @@
                             {{-- {{dd($product->instructions)}} --}}
                            {{--  {{dd("/storage/".json_decode($product->instructions)[0]->download_link)}} --}}
                         <p> Looking for product installation instructions? 
-                            @if(count($product->instructions) > 0 ) 
+                            @if(!empty($product->instructions) ) 
                             <span>
                                 <a href="/storage/{{productInstructions($product->instructions)[0]->download_link}}"> Click here to download</a>
                             </span>  
