@@ -17,7 +17,7 @@ function contentImage($path)
 
 function productInstructions($productDocument)
 {
-    $link = json_decode($productDocument)[0]->download_link;
+    $link = json_decode($productDocument);
     if ($link == '[]') {
         return true;
     } else {
