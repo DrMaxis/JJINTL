@@ -17,7 +17,7 @@ function contentImage($path)
 
 function productInstructions($productDocument)
 {
-    $path = $productDocument;
+    $path = json_decode($productDocument)[0];
     return  $path;
 }
 
