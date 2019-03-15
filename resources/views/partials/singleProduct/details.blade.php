@@ -53,9 +53,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        <div class="mb-10">
-                            <p> Looking for product installation instructions? <span><a href="{{productInstructions($product->insutrctions)}}"> Click here to download</a></span>                                </p>
-                        </div>
+                        
                     </div>
 
                     <div id="detail" class="tab-pane fade in active  pb-40">
@@ -107,8 +105,11 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="mb-10">
+                            <p> Looking for product installation instructions? <span><a href="{{productInstructions($product->insutrctions)}}"> Click here to download</a></span>                                </p>
+                        </div>
                     </div>
-
+                    
                 </div>
                 <!-- Product Thumbnail Tab Content Start -->
 
