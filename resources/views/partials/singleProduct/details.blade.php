@@ -65,40 +65,40 @@
                             <table class="pdtable">
                                 <tbody>
                                     <tr>
-                                        <th>Product Name</th>
-                                        <th>Product Model</th>
-                                        <th>Product Desc.</th>
-                                        <th>Product Dimensions</th>
-                                        <th>Product Weight</th>
+                                        <th>Name</th>
+                                        <th>Model</th>
+                                        <th>Color</th>
+                                        <th>Dimensions</th>
+                                        <th>Weight</th>
                                     </tr>
                                     @if(count($variantsForProduct) > 0 ) @foreach($variantsForProduct as $variant)
 
                                     <tr>
-                                        <td data-th="Product Name">{{$variant->name}}</td>
-                                        <td data-th="Product Model">{{$variant->model}}</td>
-                                        <td data-th="Product Desc.">{{$variant->model}}</td>
-                                        <td data-th="Product Dimensions">{{$variant->box_length}}L x {{$variant->box_width}}W x {{$variant->box_height}}H
+                                        <td data-th="Name">{{$variant->name}}</td>
+                                        <td data-th="Model">{{$variant->model}}</td>
+                                        <td data-th="Color">{{$variant->color}}</td>
+                                        <td data-th="Dimensions">{{$variant->box_length}}L x {{$variant->box_width}}W x {{$variant->box_height}}H
                                         </td>
-                                        <td data-th="Product Weight">{{$variant->shipping_weight}}</td>
+                                        <td data-th="Weight">{{$variant->shipping_weight}}</td>
                                     </tr>
 
                                     <tr>
-                                        <td data-th="Product Name">{{$product->name}}</td>
-                                        <td data-th="Product Model">{{$product->model}}</td>
-                                        <td data-th="Product Desc.">{{$product->model}}</td>
-                                        <td data-th="Product Dimensions">{{$product->box_length}}L x {{$product->box_width}}W x {{$product->box_height}}H
+                                        <td data-th="Name">{{$product->name}}</td>
+                                        <td data-th="Model">{{$product->model}}</td>
+                                        <td data-th="Color">{{$product->color}}</td>
+                                        <td data-th="Dimensions">{{$product->box_length}}L x {{$product->box_width}}W x {{$product->box_height}}H
                                         </td>
-                                        <td data-th="Product Weight">{{$product->shipping_weight}}</td>
+                                        <td data-th="Weight">{{$product->shipping_weight}}</td>
                                     </tr>
                                     @endforeach @else
 
                                     <tr>
-                                        <td data-th="Product Name">{{$product->name}}</td>
-                                        <td data-th="Product Model">{{$product->model}}</td>
-                                        <td data-th="Product Desc.">{{$product->model}}</td>
-                                        <td data-th="Product Dimensions">{{$product->box_length}}L x {{$product->box_width}}W x {{$product->box_height}}H
+                                        <td data-th="Name">{{$product->name}}</td>
+                                        <td data-th="Model">{{$product->model}}</td>
+                                        <td data-th="Color">{{$product->color}}</td>
+                                        <td data-th="Dimensions">{{$product->box_length}}L x {{$product->box_width}}W x {{$product->box_height}}H
                                         </td>
-                                        <td data-th="Product Weight">{{$product->shipping_weight}}</td>
+                                        <td data-th="Weight">{{$product->shipping_weight}}</td>
                                     </tr>
                                     @endif
                                 </tbody>
