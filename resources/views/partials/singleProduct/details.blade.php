@@ -56,7 +56,7 @@
                     </div>
 
                     <div id="detail" class="tab-pane fade in active  pb-40">
-                        <h3>product info</h3>
+                        <h3 class="mb-10">product info</h3>
                         <div class="mb-10">
                             {!!$product->description!!}
                         </div>
