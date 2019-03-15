@@ -17,18 +17,14 @@ function contentImage($path)
 
 function productInstructions($productDocument)
 {
-
-    
     $link = json_decode($productDocument);
+    //Check if file in storage exists or is an empty array
     if ($link == []) {
-        return false;
+        return false; 
     } else {
-        /* dd($productDocument); */
         $path = json_decode($productDocument)[0]->download_link;
-        
         return  '/storage/' . $path;
     }
-    
 }
 
 
@@ -48,4 +44,3 @@ function getMerchantLink($merchant)
     return $data;
     /* {{dd($merchant->pivot->merchant_id, $merchant->links()->get()->first()->pivot->merchant_id)}} */
 }
-

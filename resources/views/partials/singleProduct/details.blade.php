@@ -53,7 +53,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        
+
                     </div>
 
                     <div id="detail" class="tab-pane fade in active  pb-40">
@@ -106,27 +106,19 @@
                             </table>
                         </div>
                         <div class="mb-10">
-                           {{--  {{dd(productInstructions($product->instructions)[0]->download_link)}} --}}
-                            {{-- {{dd($product->instructions)}} --}}
-                           {{--  {{dd("/storage/".json_decode($product->instructions)[0]->download_link)}} --}}
-                           
-                        <p> Looking for product installation instructions? 
-                            @if(empty($product->instructions) || productInstructions($product->instructions) == false ) 
-                            {{-- {{dd(productInstructions($product->instructions))}} --}}
-                              <span>
-                                    {{--  --}}<a >Instuctions will be uploaded soon.</a>
-                                </span>
+                            <p> Looking for product installation instructions? @if(empty($product->instructions) || productInstructions($product->instructions)
+                                == false )
 
-                            @else 
-                            <span>
+                                <span>
+                                 <a> Instuctions will be uploaded soon.</a>
+                                </span> @else
+                                <span>
                                 <a href="{{productInstructions($product->instructions)}}"> Click here to download</a>
-                            </span> 
-                             
-                            @endif                              
-                        </p>
+                            </span> @endif
+                            </p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <!-- Product Thumbnail Tab Content Start -->
 
