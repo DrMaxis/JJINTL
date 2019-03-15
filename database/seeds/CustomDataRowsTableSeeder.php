@@ -272,8 +272,24 @@ class CustomDataRowsTableSeeder extends Seeder
                 'read' => 1,
                 'edit' => 1,
                 'add' => 1,
-                'delete' => 18,
-                'details' => '{"resize":{"width":"1000","height":null},"quality":"70%","upsize":false,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}',                'order' => 13,
+                'delete' => 1,
+                'details' => '{"resize":{"width":"1000","height":null},"quality":"70%","upsize":false,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}',                
+                'order' => 18,
+            ])->save();
+        }
+        $dataRow = $this->dataRow($productDataType, 'instructions');
+        if (!$dataRow->exists) {
+            $dataRow->fill([
+                'type' => 'file',
+                'display_name' => 'Instructions',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '',                
+                'order' => 19,
             ])->save();
         }
         $dataRow = $this->dataRow($productDataType, 'created_at');
@@ -288,7 +304,7 @@ class CustomDataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '',
-                'order' => 19,
+                'order' => 20,
             ])->save();
         }
         $dataRow = $this->dataRow($productDataType, 'updated_at');
@@ -303,7 +319,7 @@ class CustomDataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '',
-                'order' => 20,
+                'order' => 21,
             ])->save();
         }
 
@@ -544,7 +560,7 @@ class CustomDataRowsTableSeeder extends Seeder
             $dataRow->fill([
                 'type' => 'image',
                 'display_name' => 'Image',
-                'required' => 1,
+                'required' => 0,
                 'browse' => 1,
                 'read' => 1,
                 'edit' => 1,
