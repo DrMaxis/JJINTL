@@ -11,7 +11,7 @@
                 <div class="tab-content thumb-content">
 
                     <div id="merchants" class="tab-pane fade in pb-40">
-                    
+
                         <div class="table-responsive">
                             <table class="pmtable">
                                 <tbody>
@@ -22,36 +22,39 @@
                                     </tr>
 
 
-                                
 
-                                    
+
+
 
                                     @foreach($merchantsForProduct as $merchant)
 
                                     <tr>
                                         <td data-th="Merchant">
 
-                                                <img class="merchant-logo" src="{{contentImage($merchant->icon)}}">
+                                            <img class="merchant-logo" src="{{contentImage($merchant->icon)}}">
 
 
 
                                         </td>
 
-                                    <td data-th="Availability"> <a href="{{getMerchantLink($merchant)}}" target="_blank">More Details
+                                        <td data-th="Availability"> <a href="{{getMerchantLink($merchant)}}" target="_blank">More Details
                                             
                                    </a></td>
-                                          
 
-                                    
+
+
                                     </tr>
-                                   
 
-                                
-                                
-@endforeach
+
+
+
+                                    @endforeach
 
                                 </tbody>
                             </table>
+                        </div>
+                        <div class="mb-10">
+                            <p> Looking for product installation instructions? <span><a href="{{productInstructions($product->insutrctions)}}"> Click here to download</a></span>                                </p>
                         </div>
                     </div>
 
@@ -60,7 +63,7 @@
                         <div class="mb-10">
                             {!!$product->description!!}
                         </div>
-                        
+
                         <div class="table-responsive">
                             <table class="pdtable">
                                 <tbody>

@@ -14,6 +14,11 @@ function contentImage($path)
     return  $path != null && file_exists('storage/' . $path) ? asset('storage/' . $path) : asset('assets/imgs/about-us.png');
 }
 
+function productInstructions($path)
+{
+    return  $path != null && file_exists('storage/' . $path) ? asset('storage/' . $path) : "Not Found";
+}
+
 
  function getMerchantLink($merchant) {
     $merchant = $merchant;
