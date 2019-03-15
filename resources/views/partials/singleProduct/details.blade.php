@@ -88,8 +88,12 @@
                                     </tr>
                                     <tr>
                                         <td data-th="Name">{{$variant->name}}</td>
-                                        <td data-th="Model">{{$variant->model}}</td>
-                                        <td data-th="Color">{{$variant->color}}</td>                   
+                                        <td data-th="Dimensions">{{$product->box_length}}L x {{$product->box_width}}W x {{$product->box_height}}H
+                                            </td>
+                                            <td data-th="Color">{{$variant->color}}</td> 
+                                        <td data-th="Model">{{$product->model}}</td>
+                                         
+                                        <td data-th="Weight">{{$product->shipping_weight}}</td>                 
                                     </tr>
                                     @endforeach @else
 
