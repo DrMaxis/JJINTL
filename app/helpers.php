@@ -17,11 +17,12 @@ function contentImage($path)
 
 function productInstructions($productDocument)
 {
-    if (empty($productDocument)) {
+    $link = json_decode($productDocument)[0]->download_link;
+    if ($link == '[]') {
         return true;
     } else {
         /* dd($productDocument); */
-        $path = json_decode($productDocument)[0]->download_link ? '/storage/' . $productDocument : null;
+        $path = '/storage/' . $link;
         dd($path);
         return  '/storage/' . $path;
     }
