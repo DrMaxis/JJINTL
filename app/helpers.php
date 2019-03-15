@@ -19,11 +19,10 @@ function productInstructions($productDocument)
 {
     $link = json_decode($productDocument);
     if ($link == []) {
-        dd($link);
         return true;
     } else {
         /* dd($productDocument); */
-        $path = $link;
+        $path = json_decode($link)[0]->download_link;
         dd($path);
         return  '/storage/' . $path;
     }
