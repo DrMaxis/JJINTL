@@ -109,7 +109,7 @@
                            {{--  {{dd(productInstructions($product->instructions)[0]->download_link)}} --}}
                             {{-- {{dd($product->instructions)}} --}}
                            {{--  {{dd("/storage/".json_decode($product->instructions)[0]->download_link)}} --}}
-                           {{dd(productInstructions($product->instructions))}}
+                           
                         <p> Looking for product installation instructions? 
                             @if(!empty($product->instructions) ) 
                             <span>
@@ -117,7 +117,7 @@
                             </span>  
                             @else  
                             <span>
-                                    <a href="#">No instructions have been uploaded yet!</a>
+                                    {{dd(productInstructions($product->instructions))}}<a href="#">No instructions have been uploaded yet!</a>
                                 </span>  
                             @endif                              
                         </p>
