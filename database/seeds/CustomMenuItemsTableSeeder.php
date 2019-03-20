@@ -63,6 +63,22 @@ class CustomMenuItemsTableSeeder extends Seeder
                     'order' => 3,
                 ])->save();
             }
+
+            $menuItem = MenuItem::firstOrNew([
+                'menu_id' => $menu->id,
+                'title' => 'ProductPieces',
+                'url' => '/admin/productpieces',
+                'route' => null,
+            ]);
+            if (!$menuItem->exists) {
+                $menuItem->fill([
+                    'target' => '_self',
+                    'icon_class' => 'voyager-bag',
+                    'color' => null,
+                    'parent_id' => null,
+                    'order' => 4,
+                ])->save();
+            }
             $menuItem = MenuItem::firstOrNew([
                 'menu_id' => $menu->id,
                 'title' => 'Categories',

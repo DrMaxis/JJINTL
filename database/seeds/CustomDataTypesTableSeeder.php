@@ -26,6 +26,23 @@ class CustomDataTypesTableSeeder extends Seeder
                 'details' => '{"order_column":null,"order_display_column":null}',
             ])->save();
         }
+
+        $dataType = $this->dataType('slug', 'productpieces');
+        if (!$dataType->exists) {
+            $dataType->fill([
+                'name' => 'productpieces',
+                'display_name_singular' => 'ProductPiece',
+                'display_name_plural' => 'ProductPieces',
+                'icon' => 'voyager-bag',
+                'model_name' => 'App\ProductPiece',
+                'policy_name' => null,
+                'controller' => '',
+                'generate_permissions' => 1,
+                'description' => '',
+                'server_side' => 1,
+                'details' => '{"order_column":null,"order_display_column":null}',
+            ])->save();
+        }
         
         $dataType = $this->dataType('slug', 'category');
         if (!$dataType->exists) {

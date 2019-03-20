@@ -25,4 +25,8 @@ public function links() {
     return $this->belongsToMany('App\Link', 'merchant_product_link')->withPivot('link_id');
 }
 
+public function pieces() {
+    return $this->hasMany('App\ProductPiece');
+}
+
 }

@@ -173,10 +173,10 @@ class ProductsController extends VoyagerBaseController
        
         $allCategories = Category::all();
         $variants = Variant::all();
-        
+        $pieces = ProductPiece::all();
         $product = Product::find($id);
         
-        
+        $piecesForProduct = $product->pieces()->get();
         $categoriesForProduct = $product->categories()->get();
         $variantsForProduct = $product->variants()->get();
         // If a column has a relationship associated with it, we do not want to show that field
@@ -196,7 +196,7 @@ class ProductsController extends VoyagerBaseController
 
        
     
-        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable','allCategories', 'categoriesForProduct', 'variants', 'variantsForProduct'));
+        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable','allCategories', 'categoriesForProduct', 'variants', 'variantsForProduct','pieces','piecesForProduct'));
     }
 
     // POST BR(E)AD
@@ -228,7 +228,7 @@ class ProductsController extends VoyagerBaseController
 
 
         event(new BreadDataUpdated($dataType, $data));
-        
+            ProductPiece::where('product_id',$id)->update(['product_id' => 0]);
             CategoryProduct::where('product_id', $id)->delete();
             VariantProduct::where('product_id', $id)->delete();
            
@@ -236,6 +236,8 @@ class ProductsController extends VoyagerBaseController
             $this->updateProductCategories($request, $id);
            
             $this->updateProductVariants($request, $id);
+
+            $this->updateProductPieces($request, $id);
         return redirect()
         ->route("voyager.{$dataType->slug}.index")
         ->with([
@@ -288,11 +290,11 @@ class ProductsController extends VoyagerBaseController
 
         $allCategories = Category::all();
         $variants = VariantProduct::all();
-       
+        $pieces = ProductPiece::all();
+        $piecesForProduct = collect([]);
         $variantsForProduct = collect([]);
-       
         $categoriesForProduct = collect([]);
-        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable', 'allCategories', 'categoriesForProduct', 'variants', 'variantsForProduct'));
+        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable', 'allCategories', 'categoriesForProduct', 'variants', 'variantsForProduct','pieces','piecesForProduct'));
     }
 
     /**
@@ -328,6 +330,7 @@ class ProductsController extends VoyagerBaseController
 
             $this->updateProductVariants($request, $data->id);
 
+            $this->updateProductPieces($request, $data->id);
             
 
             if ($request->ajax()) {
@@ -356,6 +359,21 @@ class ProductsController extends VoyagerBaseController
             }
         }
     }
+
+    protected function updateProductPieces(Request $request, $id)
+    {
+        if ($request->pieces) {
+
+            foreach ($request->pieces as $piece) {
+                $productPiece = ProductPiece::where('id',$piece)->update(['product_id' => $id]);
+                
+
+                
+                
+            }
+        }
+    }
+
     protected function updateProductVariants(Request $request, $id)
     {
         if ($request->variant) {

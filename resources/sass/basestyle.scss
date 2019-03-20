@@ -1548,7 +1548,7 @@ ul.pull-left.home-4-search i {
   }
   
   .product-imgs .chosen {
-    border: 1px solid red;
+    border: 1px solid rgba(15, 88, 223, 0.342);
   }
   
   .main-img img {
@@ -1564,17 +1564,17 @@ ul.pull-left.home-4-search i {
   .product-finger {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     border: 1px solid white;
     min-height: 80px;
     cursor: pointer;
+    text-align: center;
   }
   
   .product-finger:hover {
-    border: 1px solid yellow;
+    border: 1px solid rgba(158, 16, 16, 0.274);
   }
 
   

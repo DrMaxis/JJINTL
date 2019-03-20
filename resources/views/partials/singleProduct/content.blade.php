@@ -8,14 +8,15 @@
 
                 <div class="col-sm-11">
                         <div class="main-img">
-                                <img src="{{productImage($product->image)}}" class="active" alt="product-image" id="primaryImg" />
+                            <img src="{{productImage($product->image)}}" class="active" alt="{{$product->name}}" id="primaryImg" />
                             </div>
                             <div class="product-imgs mt-20">
             
             
                                 <div class="product-finger chosen">
             
-                                    <img src="{{productImage($product->image)}}" alt="product-image" />
+                                    <img src="{{productImage($product->image)}}" alt="{{$product->name}}" />
+                                    <span>{{$product->name}}</span>
                                 </div>
                                 @if(count($variantsForProduct) > 0 ) 
 
@@ -27,6 +28,7 @@
                                 <div class="product-finger">
             
                                         <img src="{{productImage($variant->image)}}" alt="product-image" />
+                                        <span>{{$variant->name}}</span>
                                     </div>
                                     
                                     @endif
@@ -37,7 +39,8 @@
                                      @foreach(json_decode($product->images, true) as $image)
                                 <div class="product-finger">
             
-                                    <img src="{{productImage($image)}}" alt="product-image" />
+                                    <img src="{{productImage($image)}}" alt="{{$product->name}}" />
+                                    <span>{{$product->name}}</span>
                                 </div>
                                     @endforeach
                                 @endif
