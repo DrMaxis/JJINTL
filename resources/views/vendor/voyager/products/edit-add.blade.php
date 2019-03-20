@@ -130,7 +130,7 @@
                                                                       <i class="glyphicon glyphicon-cog"></i>
                                                                       <span class="caret"></span>
                                                                     </button>
-                                                            <ul class="checkbox-menu dropdown-menu checkbox-menu allow-focus" style="list-style-type: none; padding-left: 0">
+                                                            <ul class="piece-checkbox-menu dropdown-menu checkbox-menu allow-focus" style="list-style-type: none; padding-left: 0">
                                                             @foreach ($pieces as $piece)
                                                             
                                                             <li>
@@ -145,27 +145,56 @@
                                                             </div>
                                                         </div> <!-- end form-group --> 
 
+                              
+                                                        <div class="form-group">
+                                                            <label>Product Pieces</label>
+                                                            <div class="dropdown">
+                                                                    <button class="btn btn-default dropdown-toggle" type="button" 
+                                                                            id="dropdownMenu1" data-toggle="dropdown" 
+                                                                            aria-haspopup="true" aria-expanded="true">
+                                                                      <i class="glyphicon glyphicon-cog"></i>
+                                                                      <span class="caret"></span>
+                                                                    </button>
+                                                            <ul class="category-checkbox-menu dropdown-menu checkbox-menu allow-focus" style="list-style-type: none; padding-left: 0">
+                                                            @foreach ($allCategories as $category)
+                                                            
+                                                            <li>
+                                                                <label>
+                                                                    <input value="{{ $category->id }}" type="checkbox" name="category[]" style="margin-right: 5px;" {{ $categoriesForProduct->contains($category) ? 'checked' : '' }}>
+                                                                    {{ $category->name }}
+                                                                </label>
+                                                                </li>
+                            
+                                                            @endforeach
+                                                            </ul>
+                                                            </div>
+                                                        </div> <!-- end form-group --> 
 
-                              <div class="form-group">
-                                    <label>Categories</label>
-    
-                                    <ul style="list-style-type: none; padding-left: 0">
-                                    @foreach ($allCategories as $category)
-                                        <li><label><input value="{{ $category->id }}" type="checkbox" name="category[]" style="margin-right: 5px;" {{ $categoriesForProduct->contains($category) ? 'checked' : '' }}>{{ $category->name }}</label></li>
-                                    @endforeach
-                                    </ul>
-                                </div> <!-- end form-group --> 
-
-
-                                <div class="form-group">
-                                        <label>Variants</label>
-        
-                                        <ul style="list-style-type: none; padding-left: 0">
-                                        @foreach ($variants as $variant)
-                                            <li><label><input value="{{ $variant->id }}" type="checkbox" name="variant[]" style="margin-right: 5px;" {{ $variantsForProduct->contains($variant) ? 'checked' : '' }}>{{ $variant->name }}</label></li>
-                                        @endforeach
-                                        </ul>
-                                    </div> <!-- end form-group --> 
+                                                        <input value="{{ $variant->id }}" type="checkbox" name="variant[]" style="margin-right: 5px;" {{ $variantsForProduct->contains($variant) ? 'checked' : '' }}>{{ $variant->name }}
+                                                        <div class="form-group">
+                                                            <label>Product Pieces</label>
+                                                            <div class="dropdown">
+                                                                    <button class="btn btn-default dropdown-toggle" type="button" 
+                                                                            id="dropdownMenu1" data-toggle="dropdown" 
+                                                                            aria-haspopup="true" aria-expanded="true">
+                                                                      <i class="glyphicon glyphicon-cog"></i>
+                                                                      <span class="caret"></span>
+                                                                    </button>
+                                                            <ul class="variant-checkbox-menu dropdown-menu checkbox-menu allow-focus" style="list-style-type: none; padding-left: 0">
+                                                            @foreach ($variants as $variant)
+                                                            
+                                                            <li>
+                                                                <label>
+                                                                    <input value="{{ $variant->id }}" type="checkbox" name="variant[]" style="margin-right: 5px;" {{ $variantsForProduct->contains($variant) ? 'checked' : '' }}>
+                                                                    {{ $variant->name }}
+                                                                    
+                                                                </label>
+                                                                </li>
+                            
+                                                            @endforeach
+                                                            </ul>
+                                                            </div>
+                                                        </div> <!-- end form-group --> 
                              
 
                                {{--  <div class="form-group">
@@ -227,6 +256,51 @@
 @stop
 
 @section('javascript')
+
+
+<script>
+    (function () {
+       $(".category-checkbox-menu").on("change", "input[type='checkbox']", function() {
+   $(this).closest("li").toggleClass("active", this.checked);
+});
+
+$(document).on('click', '.allow-focus', function (e) {
+  e.stopPropagation();
+}); 
+    })();
+
+
+</script>
+
+<script>
+    (function () {
+       $(".piece-checkbox-menu").on("change", "input[type='checkbox']", function() {
+   $(this).closest("li").toggleClass("active", this.checked);
+});
+
+$(document).on('click', '.allow-focus', function (e) {
+  e.stopPropagation();
+}); 
+    })();
+
+
+</script>
+
+<script>
+    (function () {
+       $(".variant-checkbox-menu").on("change", "input[type='checkbox']", function() {
+   $(this).closest("li").toggleClass("active", this.checked);
+});
+
+$(document).on('click', '.allow-focus', function (e) {
+  e.stopPropagation();
+}); 
+    })();
+
+
+</script>
+
+
     <script>
         var params = {};
         var $file;
