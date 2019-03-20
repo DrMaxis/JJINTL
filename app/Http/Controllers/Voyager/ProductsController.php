@@ -6,6 +6,7 @@ use App\Product;
 use App\Variant;
 use App\Category;
 use App\Merchant;
+use App\ProductPiece;
 use App\VariantProduct;
 use App\CategoryProduct;
 use App\MerchantProduct;
