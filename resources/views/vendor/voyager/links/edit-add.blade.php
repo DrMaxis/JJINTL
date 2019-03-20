@@ -77,28 +77,106 @@
                                     </div>
                                 @endif
                             @endforeach
-                              <div class="form-group">
-                                    <label>Proucts</label>
-    
-                                    <ul style="list-style-type: none; padding-left: 0">
-                                    @foreach ($products as $product)
-                                        <li><label class="productSelection"><input value="{{ $product->id }}" type="checkbox" name="product" style="margin-right: 5px;" {{ $productsForLink->contains($product) ? 'checked' : '' }}>{{ $product->name }}</label></li>
-                                    @endforeach
-                                    </ul>
-                                </div> <!-- end form-group --> 
 
-                                    <div class="form-group">
-                                            <label>Merchants</label>
-            
-                                            <ul style="list-style-type: none; padding-left: 0">
-                                            @foreach ($merchants as $merchant)
-                                                <li>
-                                                    <label class="merchantSelection"><input value="{{ $merchant->id }}" type="checkbox" name="merchant" style="margin-right: 5px;" {{ $merchantsForLink->contains($merchant) ? 'checked' : '' }}>{{ $merchant->name }}</label></li>
-                                                    
-                                            @endforeach 
-                                           
-                                            </ul>
-                                        </div> <!-- end form-group --> 
+
+
+                            @section('css')
+                            <style>
+                            
+                            
+                            .checkbox-menu li label {
+                                display: block;
+                                padding: 3px 10px;
+                                clear: both;
+                                font-weight: normal;
+                                line-height: 1.42857143;
+                                color: #333;
+                                white-space: nowrap;
+                                margin:0;
+                                transition: background-color .4s ease;
+                            }
+                            .checkbox-menu li input {
+                                margin: 0px 5px;
+                                top: 2px;
+                                position: relative;
+                            }
+                            
+                            .checkbox-menu li.active label {
+                                background-color: #cbcbff;
+                                font-weight:bold;
+                            }
+                            
+                            .checkbox-menu li label:hover,
+                            .checkbox-menu li label:focus {
+                                background-color: #f5f5f5;
+                            }
+                            
+                            .checkbox-menu li.active label:hover,
+                            .checkbox-menu li.active label:focus {
+                                background-color: #b8b8ff;
+                            }
+                            
+                            </style>
+                            @endsection
+
+
+
+
+
+
+                            <div class="form-group">
+                                <label>Products</label>
+                                <div class="dropdown">
+                                        <button class="btn btn-default dropdown-toggle" type="button" 
+                                                id="dropdownMenu1" data-toggle="dropdown" 
+                                                aria-haspopup="true" aria-expanded="true">
+                                          <i class="glyphicon glyphicon-cog"></i>
+                                          <span class="caret"></span>
+                                        </button>
+                                <ul class="product-checkbox-menu dropdown-menu checkbox-menu allow-focus" style="list-style-type: none; padding-left: 0">
+                                    @foreach ($products as $product)
+                                
+                                <li>
+                                    <label class="productSelection">
+                                        <input value="{{ $product->id }}" type="checkbox" name="product" style="margin-right: 5px;" {{ $productsForLink->contains($product) ? 'checked' : '' }}>
+                                        {{ $product->name }}
+                                
+                                    </label>
+                                    </li>
+
+                                @endforeach
+                                </ul>
+                                </div>
+                            </div> <!-- end form-group --> 
+
+
+
+
+                            <div class="form-group">
+                                <label>Merchants</label>
+                                <div class="dropdown">
+                                        <button class="btn btn-default dropdown-toggle" type="button" 
+                                                id="dropdownMenu1" data-toggle="dropdown" 
+                                                aria-haspopup="true" aria-expanded="true">
+                                          <i class="glyphicon glyphicon-cog"></i>
+                                          <span class="caret"></span>
+                                        </button>
+                                <ul class="merchant-checkbox-menu dropdown-menu checkbox-menu allow-focus" style="list-style-type: none; padding-left: 0">
+                                    @foreach ($merchants as $merchant)
+                                
+                                <li>
+                                    <label class="merchantSelection">
+                                        <input value="{{ $merchant->id }}" type="checkbox" name="merchant" style="margin-right: 5px;" {{ $merchantsForLink->contains($merchant) ? 'checked' : '' }}>
+                                        {{ $merchant->name }}
+                                
+                                    </label>
+                                    </li>
+
+                                @endforeach
+                                </ul>
+                                </div>
+                            </div> <!-- end form-group --> 
+                                   
                                     
                                {{--  <div class="form-group">
                                         <label>Variants</label>
@@ -159,6 +237,34 @@
 @stop
 
 @section('javascript')
+
+<script>
+    (function () {
+       $(".product-checkbox-menu").on("change", "input[type='checkbox']", function() {
+   $(this).closest("li").toggleClass("active", this.checked);
+});
+
+$(document).on('click', '.allow-focus', function (e) {
+  e.stopPropagation();
+}); 
+    })();
+
+
+</script>
+
+<script>
+    (function () {
+       $(".merchant-checkbox-menu").on("change", "input[type='checkbox']", function() {
+   $(this).closest("li").toggleClass("active", this.checked);
+});
+
+$(document).on('click', '.allow-focus', function (e) {
+  e.stopPropagation();
+}); 
+    })();
+
+
+</script>
 
 
 <script>
