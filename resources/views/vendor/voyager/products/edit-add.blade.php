@@ -77,6 +77,75 @@
                                     </div>
                                 @endif
                             @endforeach
+
+
+
+
+                            @section('css')
+                            <style>
+                            
+                            
+                            .checkbox-menu li label {
+                                display: block;
+                                padding: 3px 10px;
+                                clear: both;
+                                font-weight: normal;
+                                line-height: 1.42857143;
+                                color: #333;
+                                white-space: nowrap;
+                                margin:0;
+                                transition: background-color .4s ease;
+                            }
+                            .checkbox-menu li input {
+                                margin: 0px 5px;
+                                top: 2px;
+                                position: relative;
+                            }
+                            
+                            .checkbox-menu li.active label {
+                                background-color: #cbcbff;
+                                font-weight:bold;
+                            }
+                            
+                            .checkbox-menu li label:hover,
+                            .checkbox-menu li label:focus {
+                                background-color: #f5f5f5;
+                            }
+                            
+                            .checkbox-menu li.active label:hover,
+                            .checkbox-menu li.active label:focus {
+                                background-color: #b8b8ff;
+                            }
+                            
+                            </style>
+                            @endsection
+                            
+                            
+                                                        <div class="form-group">
+                                                            <label>Product Pieces</label>
+                                                            <div class="dropdown">
+                                                                    <button class="btn btn-default dropdown-toggle" type="button" 
+                                                                            id="dropdownMenu1" data-toggle="dropdown" 
+                                                                            aria-haspopup="true" aria-expanded="true">
+                                                                      <i class="glyphicon glyphicon-cog"></i>
+                                                                      <span class="caret"></span>
+                                                                    </button>
+                                                            <ul class="checkbox-menu dropdown-menu checkbox-menu allow-focus" style="list-style-type: none; padding-left: 0">
+                                                            @foreach ($pieces as $piece)
+                                                            
+                                                            <li>
+                                                                <label>
+                                                                    <input value="{{ $piece->id }}" type="checkbox" name="pieces[]" style="margin-right: 5px;" {{ $piecesForProduct->contains($piece) ? 'checked' : '' }}>
+                                                                    {{ $piece->name }}
+                                                                </label>
+                                                                </li>
+                            
+                                                            @endforeach
+                                                            </ul>
+                                                            </div>
+                                                        </div> <!-- end form-group --> 
+
+
                               <div class="form-group">
                                     <label>Categories</label>
     
