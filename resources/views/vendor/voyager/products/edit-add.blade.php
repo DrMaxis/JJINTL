@@ -147,7 +147,7 @@
 
                               
                                                         <div class="form-group">
-                                                            <label>Product Pieces</label>
+                                                            <label>Product Categories</label>
                                                             <div class="dropdown">
                                                                     <button class="btn btn-default dropdown-toggle" type="button" 
                                                                             id="dropdownMenu1" data-toggle="dropdown" 
@@ -171,7 +171,7 @@
                                                         </div> <!-- end form-group --> 
 
                                                         <div class="form-group">
-                                                            <label>Product Pieces</label>
+                                                            <label>Product Variants</label>
                                                             <div class="dropdown">
                                                                     <button class="btn btn-default dropdown-toggle" type="button" 
                                                                             id="dropdownMenu1" data-toggle="dropdown" 
