@@ -170,7 +170,6 @@
                                                             </div>
                                                         </div> <!-- end form-group --> 
 
-                                                        <input value="{{ $variant->id }}" type="checkbox" name="variant[]" style="margin-right: 5px;" {{ $variantsForProduct->contains($variant) ? 'checked' : '' }}>{{ $variant->name }}
                                                         <div class="form-group">
                                                             <label>Product Pieces</label>
                                                             <div class="dropdown">
