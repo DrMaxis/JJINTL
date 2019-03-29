@@ -26,7 +26,7 @@ class ContactUsController extends Controller
             ]);
             $email = $this->addToEmailsTable($request, null);
 
-            Mail::send(new ConfirmEmailSentToJJ($email));
+            
             Mail::send(new ContactRequestRecieved($email));
                 
 

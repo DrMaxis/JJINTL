@@ -5,56 +5,12 @@
             <div class="col-sm-12">
                 <ul class="main-thumb-desc text-center list-inline">
                     <li class="active"><a data-toggle="tab" href="#detail">Details</a></li>
-                    <li><a data-toggle="tab" href="#merchants">Where to Find</a></li>
+                    
                 </ul>
 
                 <div class="tab-content thumb-content">
 
-                    <div id="merchants" class="tab-pane fade in pb-40">
-
-                        <div class="table-responsive">
-                            <table class="pmtable">
-                                <tbody>
-                                    <tr>
-                                        <th>Merchant</th>
-                                        <th>Availability</th>
-
-                                    </tr>
-
-
-
-
-
-
-                                    @foreach($merchantsForProduct as $merchant)
-
-                                    <tr>
-                                        <td data-th="Merchant">
-
-                                            <img class="merchant-logo" src="{{contentImage($merchant->icon)}}">
-
-
-
-                                        </td>
-
-                                        <td data-th="Availability"> <a href="{{getMerchantLink($merchant)}}" target="_blank">More Details
-                                            
-                                   </a></td>
-
-
-
-                                    </tr>
-
-
-
-
-                                    @endforeach
-
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
+                    
 
                     <div id="detail" class="tab-pane fade in active  pb-40">
                         <h3 class="mb-10">product info</h3>
