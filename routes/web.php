@@ -97,3 +97,19 @@ Route::get('/search', 'ProductsController@search')->name('search');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Dev Routes
+|--------------------------------------------------------------------------
+|
+| Test Functions here
+| 
+| 
+| */
+
+Route::get('/makelink', function () {
+Artisan::call('storage:link');
+});

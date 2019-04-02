@@ -5,13 +5,8 @@
             <div class="col-sm-12">
                 <ul class="main-thumb-desc text-center list-inline">
                     <li class="active"><a data-toggle="tab" href="#detail">Details</a></li>
-                    
                 </ul>
-
                 <div class="tab-content thumb-content">
-
-                    
-
                     <div id="detail" class="tab-pane fade in active  pb-40">
                         <h3 class="mb-10">product info</h3>
                         <div class="mb-10">
@@ -28,15 +23,12 @@
                                     </tr>
                                     @if(count($productPieces) > 0 )
                                      @foreach($productPieces as $piece)
-
                                     <tr>
                                         <td data-th="Set Piece">{{$piece->name}}</td>
                                         <td data-th="Dimensions">{{$piece->length}}L x {{$piece->width}}W x {{$piece->height}}H
-                                        </td>
-                                        
+                                        </td>                                
                                     </tr>
-                                    @endforeach 
-                                    
+                                    @endforeach                                   
                                     @endif
                                 </tbody>
                             </table>
@@ -54,13 +46,8 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
                 <!-- Product Thumbnail Tab Content Start -->
-
-
-
-
                 <!-- Product Thumbnail Tab Content End -->
             </div>
         </div>

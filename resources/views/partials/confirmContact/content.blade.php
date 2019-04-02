@@ -16,12 +16,6 @@
                                    
                                 </div>
                             </div>
-                            {{-- <div class="container">
-                                <div class="xen-tube catProductSlideButtons">
-        
-                                </div>
-                            </div> --}}
-        
                         </div>
 
         

@@ -18,17 +18,14 @@ class CreateMerchantProductLinkTable extends Migration
             $table->integer('merchant_id')->unsigned()->nullable();
             $table->foreign('merchant_id')->references('id')
                 ->on('merchants')->onDelete('cascade');
-
-
-                $table->integer('product_id')->unsigned()->nullable();
+            $table->integer('product_id')->unsigned()->nullable();
             $table->foreign('product_id')->references('id')
                 ->on('products')->onDelete('cascade');
-
             $table->integer('link_id')->unsigned()->nullable();
             $table->foreign('link_id')->references('id')
                 ->on('product_links')->onDelete('cascade');
 
-           
+
             $table->timestamps();
         });
     }

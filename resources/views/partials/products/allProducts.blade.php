@@ -3,7 +3,6 @@
         @section('search')
 @include('inc.search')
         @endsection
-        
         <!-- Categories Product Start -->
         <div class="all-categories pb-100">
             <div class="container">

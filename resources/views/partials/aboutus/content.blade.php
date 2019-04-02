@@ -10,10 +10,6 @@
                     <div class="legal about-us">
                             <img class="img" src="{{contentImage($aboutUs->image)}}" alt="blog-image">
                         <h2>{{$aboutUs->title}}</h2>
-
-
-
-
                         <div class="legal-content">
                             <p class="mt-30">{!!$aboutUs->description!!}</p>
                         </div>

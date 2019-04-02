@@ -8,8 +8,7 @@
             <tr>
                 <th>Name</th>
                 <th>Details</th>
-                <th>Description</th>
-               
+                <th>Description</th>   
             </tr>
         </thead>
         <tbody>

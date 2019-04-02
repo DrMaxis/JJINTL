@@ -9,10 +9,6 @@
                 {{-- Section Title End --}}
              @foreach($productsOnSale as $product)
             <div class="row mb-100">
-
-                
-
-               
                 {{-- Single Banner Start --}}
                 <div class="col-sm-6">
                     <div class="single-banner">
@@ -25,7 +21,6 @@
                     <div class="single-banner">
                         <div class="banner-description">
                             <h3>{{$product->name}}</h3>
-                           
                         </div>
                     </div>
                 </div>

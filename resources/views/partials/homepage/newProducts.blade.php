@@ -16,7 +16,6 @@
                     {{-- Best Seller Product Activation Start --}}
                     <div class="best-seller new-products owl-carousel">
                         {{-- Single Product Start --}}
-
                         @foreach($newProducts as $product)
                         <div class="single-product">
                             {{-- Product Image Start --}}
@@ -28,9 +27,7 @@
                                     <img class="secondary-img" src="{{productImage($image)}}" alt="single-product">
                                     @endforeach
                                     @endif
-
-                                </a>
-                               
+                                </a>                        
                                 <span class="sticker-new">new</span>
                             </div>
                             {{-- Product Image End --}}
