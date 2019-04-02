@@ -52,15 +52,6 @@ class JJInstall extends Command
 
     protected function proceed() {
         if ($this->confirm('This will delete All current data and install the default dummy data. Are you sure?')) {
-
-           /*  File::deleteDirectory(public_path('storage/products/dummy'));
-            $this->callSilent('storage:link');
-            $copySuccess = File::copyDirectory(public_path('storage/products'), public_path('storage/products/dummy'));
-
-            if ($copySuccess) {
-                $this->info('Images successfully copied to storage folder');
-            } */
-
         }
 
 
@@ -111,8 +102,18 @@ class JJInstall extends Command
 
 
 
+$this->info('
+       
+      _     _   ___ _   _ _____ _____ ____  _   _    _  _____ ___ ___  _   _    _    _     
+     | |   | | |_ _| \ | |_   _| ____|  _ \| \ | |  / \|_   _|_ _/ _ \| \ | |  / \  | |    
+  _  | |_  | |  | ||  \| | | | |  _| | |_) |  \| | / _ \ | |  | | | | |  \| | / _ \ | |    
+ | |_| | |_| |  | || |\  | | | | |___|  _ <| |\  |/ ___ \| |  | | |_| | |\  |/ ___ \| |___ 
+  \___/ \___/  |___|_| \_| |_| |_____|_| \_\_| \_/_/   \_\_| |___\___/|_| \_/_/   \_\_____|
+                                                                                           
+                                    Install Complete
 
-        $this->info(' Data has been Installed');
+                                                                                             
+  ');
 
     }
 }

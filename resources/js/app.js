@@ -1,12 +1,10 @@
 /*
-Template Name: Gatcomart;
-Description:  Mega Shop Responsive Ecommerce HTML Template;
-Template URI:;
-Author Name:Md Bayazid Hasan;
-Author URI:;
-Version: 1.0;
-
-NOTE: main.js, All custom script and plugin activation script in this file. 
+      _     _   ___ _   _ _____ _____ ____  _   _    _  _____ ___ ___  _   _    _    _     
+     | |   | | |_ _| \ | |_   _| ____|  _ \| \ | |  / \|_   _|_ _/ _ \| \ | |  / \  | |    
+  _  | |_  | |  | ||  \| | | | |  _| | |_) |  \| | / _ \ | |  | | | | |  \| | / _ \ | |    
+ | |_| | |_| |  | || |\  | | | | |___|  _ <| |\  |/ ___ \| |  | | |_| | |\  |/ ___ \| |___ 
+  \___/ \___/  |___|_| \_| |_| |_____|_| \_\_| \_/_/   \_\_| |___\___/|_| \_/_/   \_\_____|
+                                                                                           
 */
 
 /*================================================
