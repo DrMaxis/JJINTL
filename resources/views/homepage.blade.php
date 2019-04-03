@@ -91,7 +91,9 @@
   height: 11px !important;
   margin-bottom: 1px !important;
 }
-
+#simage {overflow:hidden;}
+#simage.landscape {width:100%; height:auto;}
+#simage.portrait {max-height:600px; width:auto; height:100%;}
 </style>
 @endsection
 
@@ -112,5 +114,22 @@
 @section('xjs')
 
 
+<script>
+
+
+
+  (function () {
+  const elements = document.querySelectorAll('#simage');
+  elements.forEach(function(entry) {
+   if (entry.width / entry.height >= 1) {
+    entry.className += 'landscape';
+   } else {
+     entry.className += 'portrait';
+   }
+  });
+  })();
+      
+  
+  </script>
 
 @endsection
