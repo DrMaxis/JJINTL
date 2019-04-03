@@ -122,9 +122,9 @@
   const elements = document.querySelectorAll('#simage');
   elements.forEach(function(entry) {
    if (entry.width / entry.height >= 1) {
-    entry.className += 'landscape';
+    entry.className += ' landscape';
    } else {
-     entry.className += 'portrait';
+     entry.className += ' portrait';
    }
   });
   })();
