@@ -14,8 +14,11 @@
                             <p>About JJ International, Inc</p>
                             <h5 class="contact-info mtb-10">contact info:</h5>
                             <ul class="footer-list first-content">
-                                <li><i class="pe-7s-map-marker"></i>
-                                    {{env('BUISNESS_ADDRESS')}}
+                                <li><span>
+                                         {{env('BUISNESS_ADDRESS')}}
+                                        </span>
+                                    <i class="pe-7s-map-marker"></i>
+                                    
                                     {{env('BUISNESS_CITY')}},{{env('BUISNESS_STATE')}}
                                     {{env('BUISNESS_ZIP')}}
 
