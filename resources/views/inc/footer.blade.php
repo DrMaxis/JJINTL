@@ -16,13 +16,13 @@
                             <ul class="footer-list first-content">
                                 <li>
                                     <i class="pe-7s-map-marker"></i>
-                                    <span>
+                                    <span style="display:block;">
                                         {{env('BUSINESS_ADDRESS')}}
                                     </span>
-                                    <span>
+                                    <span style="display:block;">
                                         {{env('BUSINESS_CITY')}},{{env('BUSINESS_STATE')}}
                                         </span>
-                                    <span>
+                                    <span style="display:block;">
                                         {{env('BUSINESS_ZIP')}}
 
                                     </span>
