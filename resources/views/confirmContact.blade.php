@@ -15,7 +15,9 @@
 
 
 @include('partials.confirmContact.content')
-
+@section('canonical-url')
+{{URL::current()}}
+@endsection
 
 @endsection
 

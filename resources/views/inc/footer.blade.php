@@ -14,9 +14,14 @@
                             <p>About JJ International, Inc</p>
                             <h5 class="contact-info mtb-10">contact info:</h5>
                             <ul class="footer-list first-content">
-                                <li><i class="pe-7s-map-marker"></i>Address will be here</li>
-                                <li><i class="pe-7s-mail"></i>your-email@example.com</li>
-                                <li><i class="pe-7s-call"></i>+00 123 45678</li>
+                                <li><i class="pe-7s-map-marker"></i>
+                                    {{env('BUISNESS_ADDRESS')}}
+                                    {{env('BUISNESS_CITY')}},{{env('BUISNESS_STATE')}}
+                                    {{env('BUISNESS_ZIP')}}
+
+                                </li>
+                                <li><i class="pe-7s-mail"></i>{{env('BUSINESS_ADMINEMAIL')}}</li>
+                                <li><i class="pe-7s-call"></i>{{env('BUSINESS_ADMINPHONE')}}</li>
                             </ul>
                         </div>
                     </div>

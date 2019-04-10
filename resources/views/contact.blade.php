@@ -1,5 +1,7 @@
 @extends('layouts.ui')
-
+@section('canonical-url')
+{{URL::current()}}
+@endsection
 
 
 @section('xcss')

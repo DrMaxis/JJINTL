@@ -217,28 +217,7 @@
         galleryActiveClass: "active"
     });
     
-  
-    $(document).ready(function(){
-  /*----------------------------
-     Hero Slider Activation
-    -----------------------------*/
-  $(".Modern-Slider").slick({
-    autoplay:true,
-    autoplaySpeed:10000,
-    speed:900,
-    slidesToShow:1,
-    slidesToScroll:1,
-    pauseOnHover:false,
-    dots:true,
-    pauseOnDotsHover:true,
-    cssEase:'linear',
-    fade:true,
-    draggable:true,
-    prevArrow:'<button class="PrevArrow"></button>',
-    nextArrow:'<button class="NextArrow"></button>', 
-  });
-  
-})
+
     /*-------------------------------------
     13. Most Viewd Product activation
     --------------------------------------*/
@@ -304,10 +283,7 @@
         }
     })
     
-    /*----------------------------
-    16. WOW Js Activation
-    -----------------------------*/
-    new WOW().init();
+
     
     /*----------------------------
     17. Checkout Page Activation
