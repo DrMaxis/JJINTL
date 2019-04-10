@@ -15,11 +15,17 @@
                             <h5 class="contact-info mtb-10">contact info:</h5>
                             <ul class="footer-list first-content">
                                 <li>
-                                    <i class="pe-7s-map-marker"></i> 
-                                    {{env('BUSINESS_ADDRESS')}}
-                                     {{env('BUSINESS_CITY')}},{{env('BUSINESS_STATE')}}
-                                    {{env('BUSINESS_ZIP')}}
+                                    <i class="pe-7s-map-marker"></i>
+                                    <span>
+                                        {{env('BUSINESS_ADDRESS')}}
+                                    </span>
+                                    <span>
+                                        {{env('BUSINESS_CITY')}},{{env('BUSINESS_STATE')}}
+                                        </span>
+                                    <span>
+                                        {{env('BUSINESS_ZIP')}}
 
+                                    </span>
                                 </li>
                                 <li><i class="pe-7s-mail"></i>{{env('BUSINESS_ADMINEMAIL')}}</li>
                                 <li><i class="pe-7s-call"></i>{{env('BUSINESS_ADMINPHONE')}}</li>
