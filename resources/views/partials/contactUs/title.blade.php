@@ -5,8 +5,8 @@
             <div class="col-sm-12">
                 <div class="breadcrumb-content text-center ptb-70"style="background: rgba(0, 0, 0, 0) url(assets/imgs/banners/blue-wicker.png) no-repeat scroll center center / cover;">
                     <ul class="breadcrumb-list breadcrumb">
-                        <li><a href="index.html">home</a></li>
-                        <li><a href="contact.html">contact</a></li>
+                        <li><a href="{{route('homepage')}}">home</a></li>
+                        <li><a href="{{route('contact-us')}}">contact</a></li>
                     </ul>
                 </div>
             </div>

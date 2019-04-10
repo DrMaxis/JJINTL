@@ -109,7 +109,3 @@ Route::group(['prefix' => 'admin'], function () {
 | 
 | 
 | */
-
-Route::get('/makelink', function () {
-Artisan::call('storage:link');
-});
