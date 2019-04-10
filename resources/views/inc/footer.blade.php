@@ -14,12 +14,10 @@
                             <p>About JJ International, Inc</p>
                             <h5 class="contact-info mtb-10">contact info:</h5>
                             <ul class="footer-list first-content">
-                                <li><span>
-                                         {{env('BUSINESS_ADDRESS')}}
-                                        </span>
-                                    <i class="pe-7s-map-marker"></i>
-                                    
-                                    {{env('BUSINESS_CITY')}},{{env('BUSINESS_STATE')}}
+                                <li>
+                                    <i class="pe-7s-map-marker"></i> 
+                                    {{env('BUSINESS_ADDRESS')}}
+                                     {{env('BUSINESS_CITY')}},{{env('BUSINESS_STATE')}}
                                     {{env('BUSINESS_ZIP')}}
 
                                 </li>
@@ -42,13 +40,13 @@
             <div class="container-footer ptb-30">
                 <div class="row">
                     <div class="col-sm-7">
-                    <p class="text-left copyright-text">Copyright © <a href="{{route('about-us')}}">JJ
+                        <p class="text-left copyright-text">Copyright © <a href="{{route('about-us')}}">JJ
                                     International</a> All Rights Reserved.</p>
                     </div>
                     <div class="col-sm-5">
                         <div class="socila-footer">
-                                {{menu('foot-social', 'partials.menus.foot-social')}}
-                            
+                            {{menu('foot-social', 'partials.menus.foot-social')}}
+
                         </div>
                     </div>
                 </div>
@@ -60,4 +58,4 @@
     </div>
     {{-- Footer Bottom End --}}
 </footer>
-{{-- Footer End --}} 
+{{-- Footer End --}}
