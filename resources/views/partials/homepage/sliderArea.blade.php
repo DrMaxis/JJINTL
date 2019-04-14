@@ -4,7 +4,7 @@
                 {{--Main Slider Area Start --}}
                 <div class="slider-wrapper theme-default">
                     {{--Slider Background  Image Start--}}
-                     <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+                     <div id="myCarousel" class="carousel slide" data-interval="{{setting('site.site_slider_interval')}}" data-ride="carousel">
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
                               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>

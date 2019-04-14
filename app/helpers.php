@@ -13,6 +13,10 @@ function contentImage($path)
 {
     return  $path != null && file_exists('storage/' . $path) ? asset('storage/' . $path) : asset('assets/imgs/about-us.png');
 }
+function adminContentImage($path)
+{
+    return  $path != null && file_exists('storage/' .str_replace('\\', '/', $path)) ? asset('storage/' . str_replace('\\', '/', $path)) : asset('assets/imgs/about-us.png');
+}
 function productInstructions($productDocument)
 {
     $link = json_decode($productDocument);

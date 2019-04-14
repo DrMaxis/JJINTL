@@ -94,6 +94,11 @@
 #simage {overflow:hidden;}
 #simage.landscape {width:100%; height:auto;}
 #simage.portrait {max-height:600px; width:auto; height:100%;}
+
+@media (max-width:420px) {
+  #simage.portrait {max-height:300px; width:auto; height:100%;}
+
+}
 </style>
 @endsection
 
