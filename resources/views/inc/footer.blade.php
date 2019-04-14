@@ -17,18 +17,18 @@
                                 <li>
                                     <i class="pe-7s-map-marker"></i>
                                     <span style="display:block;">
-                                        {{env('BUSINESS_ADDRESS')}}
+                                        {{setting('site.BUSINESS_ADDRESS')}}
                                     </span>
                                     <span style="display:block;">
-                                        {{env('BUSINESS_CITY')}},{{env('BUSINESS_STATE')}}
+                                        {{setting('site.BUSINESS_CITY')}},{{setting('site.BUSINESS_STATE')}}
                                         </span>
                                     <span style="display:block;">
-                                        {{env('BUSINESS_ZIP')}}
+                                        {{setting('site.BUSINESS_ZIP')}}
 
                                     </span>
                                 </li>
-                                <li><i class="pe-7s-mail"></i>{{env('BUSINESS_ADMINEMAIL')}}</li>
-                                <li><i class="pe-7s-call"></i>{{env('BUSINESS_ADMINPHONE')}}</li>
+                                <li><i class="pe-7s-mail"></i>{{setting('site.BUSINESS_EMAIL')}}</li>
+                                <li><i class="pe-7s-call"></i>{{setting('site.BUSINESS_PHONE')}}</li>
                             </ul>
                         </div>
                     </div>
