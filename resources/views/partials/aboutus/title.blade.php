@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div class="breadcrumb-content text-center ptb-70" style="background: rgba(0, 0, 0, 0) url(assets/imgs/banners/blue-wicker.png) no-repeat scroll center center / cover;">
+                    <div class="breadcrumb-content text-center ptb-70"style="background: rgba(0, 0, 0, 0) url({{adminContentImage(setting('site.site_banner'))}}) no-repeat scroll center center / cover">
                         <ul class="breadcrumb-list breadcrumb">
                             <li><a href="{{route('homepage')}}">home</a></li>
                             <li><a href="{{route('about-us')}}">about us</a></li>

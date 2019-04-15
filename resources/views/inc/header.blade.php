@@ -50,5 +50,6 @@
                 </ul> --}}
             </nav>
         </div>
-
+        
+        @include('inc.notifications')
        {{-- Header Area End  --}}

@@ -73,6 +73,23 @@
                                     <span class="text-danger">Note:</span> HTML is not translated!
                                   </div>
                                 </div>
+
+                                <div class="row text-center">
+                                  <div class="col-md-4 "></div>
+                                  <div class="form-group col-md-4">
+                                      <div class="captcha">
+                                         <span class="refereshrecapcha">{!! captcha_img('flat') !!}</span>
+                                          <button type="button" class="btn btn-success"><i class="fa fa-refresh" href="javascript:void(0)" onclick="refreshCaptcha()"></i></button>
+                                      </div>
+                                      
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-4"></div>
+                                  <div class="form-group col-md-4">
+                                      <input id="captcha" type="text" class="form-control" placeholder="Enter Captcha" name="captcha"></div>
+                              </div>
+
                                 <div class="pull-right">
                                   <button id="review-submit" class="rgb-wta customer-btn">Continue</button>
                                 </div>

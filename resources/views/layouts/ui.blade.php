@@ -23,9 +23,9 @@
     
 
     @include('inc.header')
-  
+    
 @yield('content')
-
+@include('inc.notifications')
 
 
   @include('inc.footer')

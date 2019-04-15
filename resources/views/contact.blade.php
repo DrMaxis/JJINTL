@@ -11,7 +11,7 @@
 
 
 
-@section('content');
+@section('content')
 
 @include('partials.contactUs.title')
 
@@ -23,4 +23,25 @@
 @endsection
 
 @section('xjs') 
+
+
+<script>
+    
+    function refreshCaptcha(){
+    $.ajax({
+    url: "/refreshcaptcha",
+    type: 'get',
+      dataType: 'html',        
+      success: function(json) {
+        $('.refereshrecapcha').html(json);
+      },
+      error: function(data) {
+        alert('Try Again.');
+        console.log(data);
+      }
+    });
+    }
+    
+    
+    </script>
 @endsection

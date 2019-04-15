@@ -22,6 +22,8 @@ Route::get('/about', 'PageController@about')->name('about-us');
 // Product Information Page
 Route::get('/productinformation', 'PageController@productInfo')->name('product-info');
 
+// Refresh Captcha Confirm
+Route::get('/refreshcaptcha', 'CaptchaController@refreshCaptcha'); 
 
 
 
@@ -109,3 +111,9 @@ Route::group(['prefix' => 'admin'], function () {
 | 
 | 
 | */
+Route::get('/clear-cache', function() {
+    $exitCode = Artisan::call('cache:clear');
+    $routeCode = Artisan::call('route:clear');
+    
+    // return what you want
+});

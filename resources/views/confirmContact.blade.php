@@ -33,7 +33,7 @@
     (function () {
             
         var count = 10;
-            document.getElementById('redirect-button').innerHTML = 'Redirecting to CountDown in <span id="countDown">'+ count + '</span> seconds....' + 'Or <a id="fadeLink"  href="https://jjinternational.com"><span style="text-decoration:underline;">Click here to continue</span> ';
+            document.getElementById('redirect-button').innerHTML = 'Redirecting in <span id="countDown">'+ count + '</span> seconds....' + 'Or <a id="fadeLink"  href="https://jjinternationalinc.com"><span style="text-decoration:underline;">Click here to continue</span> ';
             setInterval(function(){
                 count--;
                 document.getElementById('countDown').innerHTML = count;

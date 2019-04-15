@@ -23,6 +23,7 @@ class ContactUsController extends Controller
                 'company' => 'required|max:255',
                 'subject' => 'required|max:255',
                 'message' => 'required|max:60000',
+                'captcha' => 'required|captcha',
             ]);
             $email = $this->addToEmailsTable($request, null);
 

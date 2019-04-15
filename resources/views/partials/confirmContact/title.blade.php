@@ -10,7 +10,7 @@
     
                             <div style="text-align:center;">
                                 <h2>Complete</h2>
-                                <p>A confirmation email was sent</p>
+                                <p>A email was sent</p>
                             </div>
                             <div class="spacer"></div>
                             <div style="text-align:center;">
