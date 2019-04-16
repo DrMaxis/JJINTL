@@ -35,6 +35,20 @@
                                     autofocus
                                   >
                                 </div>
+
+                                <div class="fieldset">
+                                  <label for="phone" class="image-replace username">Phone Number</label>
+                                  <input
+                                    id="phone"
+                                    type="number"
+                                    class="full-width has-padding has-border"
+                                   
+                                    placeholder="123-456-7890"
+                                    name="phone"
+                                    required
+                                    autofocus
+                                  >
+                                </div>
                                 <div class="fieldset">
                                     <label for="comapany" class="image-replace username">Company</label>
                                     <input

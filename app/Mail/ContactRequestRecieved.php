@@ -18,9 +18,9 @@ class ContactRequestRecieved extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Email $email)
     {
-        
+        $this->email = $email;
     }
 
     /**
@@ -31,7 +31,7 @@ class ContactRequestRecieved extends Mailable
     public function build()
     {
         return $this
-        ->to( env('MAIL_FROM_ADDRESS', 'Jay@jjintl.com') , env('MAIL_FROM_NAME', 'Jay'))
+        ->to( env('MAIL_FROM_ADDRESS', 'Jay@jjinternationalinc.com') , env('MAIL_FROM_NAME', 'Jay'))
         ->subject('JJ International Contact Request')
         ->view('emails.contact.request-recieved');
     }

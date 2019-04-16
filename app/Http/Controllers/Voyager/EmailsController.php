@@ -223,18 +223,12 @@ class EmailsController extends VoyagerBaseController
             $view = "voyager::$slug.edit-add";
         }
 
-        $allCategories = Category::all();
-        $variants = Variant::all();
-        $product = Product::find($id);
-        
-        $categoriesForProduct = $product->categories()->get();
-        $variantsForProduct = $product->variants()->get();
-
+     
 
         
         
         
-        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable','allCategories', 'categoriesForProduct', 'variants', 'variantsForProduct'));
+        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable'));
     }
 
     // POST BR(E)AD
@@ -264,13 +258,7 @@ class EmailsController extends VoyagerBaseController
 
             event(new BreadDataUpdated($dataType, $data));
 
-            CategoryProduct::where('product_id', $id)->delete();
-            VariantProduct::where('product_id', $id)->delete();
-
-            //Update if there's at least one category checked
-            $this->updateProductCategories($request, $id);
-
-            $this->updateProductVariants($request, $id);
+    
             
             return redirect()
                 ->route("voyager.{$dataType->slug}.index")
@@ -323,12 +311,10 @@ class EmailsController extends VoyagerBaseController
             $view = "voyager::$slug.edit-add";
         }
 
-        $allCategories = Category::all();
-        $variants = ProductVariant::all();
-        $variantsForProduct = collect([]);
+      
 
-        $categoriesForProduct = collect([]);
-        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable', 'allCategories', 'categoriesForProduct', 'variants', 'variantsForProduct'));
+        
+        return Voyager::view($view, compact('dataType', 'dataTypeContent', 'isModelTranslatable'));
     }
 
     /**
@@ -360,9 +346,6 @@ class EmailsController extends VoyagerBaseController
 
             event(new BreadDataAdded($dataType, $data));
 
-            $this->updateProductCategories($request, $data->id);
-
-            $this->updateProductVariants($request, $data->id);
 
 
             if ($request->ajax()) {
@@ -379,34 +362,6 @@ class EmailsController extends VoyagerBaseController
     }
 
 
-    protected function updateProductCategories(Request $request, $id)
-    {
-        if ($request->category) {
-
-            foreach ($request->category as $category) {
-                CategoryProduct::create([
-                    'product_id' => $id,
-                    'category_id' => $category,
-
-                ]);
-            }
-        }
-    }
-
-
-    protected function updateProductVariants(Request $request, $id)
-    {
-        if ($request->variant) {
-
-            foreach ($request->variant as $variant) {
-                VariantProduct::create([
-                    'product_id' => $id,
-                    'variant_id' => $variant,
-
-                ]);
-            }
-        }
-    }
 
 
 }

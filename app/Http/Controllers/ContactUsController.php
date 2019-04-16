@@ -20,6 +20,7 @@ class ContactUsController extends Controller
             $validator = $this->validate($request, [
                 'name' => 'required|max:255',
                 'email' => 'required|max:255',
+                'phone' => 'required|max:255',
                 'company' => 'required|max:255',
                 'subject' => 'required|max:255',
                 'message' => 'required|max:60000',
@@ -53,7 +54,8 @@ class ContactUsController extends Controller
         $email = Email::create([
             'name' => $request->name,
             'email' => $request->email,
-            'company' => $request->email,
+            'phone' => $request->phone,
+            'company' => $request->company,
             'subject' => $request->subject,
             'message' => $request->message,
         ]);
